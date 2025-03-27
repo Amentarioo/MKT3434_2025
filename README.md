@@ -1,46 +1,79 @@
-# ⚙️ MKT3434_2025
-
-**MKT3434 Course of Dept. Mechatronics Eng. at YTU instructed by Ertugrul Bayraktar**
-
----
+# ⚙️ Machine Learning GUI - PyQt6
 
 ## 🚀 Overview
 
-This repository provides a base GUI framework for students to develop and integrate machine learning methods. The GUI is built using PyQt6 and supports various classical machine learning and deep learning techniques. Students will extend this GUI by adding necessary functionalities over time.
+This project is a **Machine Learning GUI** built with **PyQt6** that allows users to:
+
+- Load and preprocess datasets
+- Handle missing values using `SimpleImputer`
+- Select and train machine learning models
+- Input custom **Bayesian priors** for `GaussianNB`
+- Test **SVR** on the **California Housing Dataset**
+- View model performance (MSE for regression, Accuracy for classification)
 
 ---
 
-## 📚 Long-Term Homework Instructions
+## 🛠 Installation
 
-Students are required to modify and enhance this GUI incrementally every three weeks. The objective is to build a fully functional and improved machine learning GUI.
-
-### 🎯 Key Requirements:
-
-*   **Insert Necessary Methods:** Integrate missing machine learning methods within the provided GUI framework.
-*   **Enhance the GUI:** The default interface is provided, but students are encouraged to improve usability and design.
-*   **Ensure Data and Method Appropriateness:** The datasets and algorithms should be compatible within the GUI structure.
-*   **Implement Training and Testing Processes:** Correctly implement model training and evaluation workflows.
-*   **Regular Submissions:** Submit updates every three weeks through Google Classroom for this course.
-
----
-
-## 🤝 Repository and Collaboration
-
-Students should fork this repository and develop their versions.
-
-Regular commits and documentation updates are expected.
-
----
-
-## 🏁 Getting Started
-
-### ⚙️ Prerequisites:
-
-Ensure you have the following installed:
-
-*   Python 3.8+
-
-### 📦 Required dependencies:
+Ensure you have **Python 3.8+** installed. Then, install the required dependencies:
 
 ```bash
-pip install numpy pandas matplotlib PyQt6 scikit-learn tensorflow torch torchvision torchaudio opencv-python opencv-contrib-python scipy fastai kornia
+pip install numpy pandas PyQt6 scikit-learn
+```
+
+---
+
+## 📌 Features & Usage
+
+### 1️⃣ Load Dataset & Handle Missing Values
+
+1. Click **"Load CSV Dataset"** and select a dataset.
+2. Missing values are automatically filled using the **mean** strategy (`SimpleImputer`).
+3. A confirmation message appears after successful loading.
+
+### 2️⃣ Select & Train ML Model
+
+1. Choose a model from the **dropdown menu**:
+   - **Regression:** Linear Regression, Decision Tree, MLP, SVR
+   - **Classification:** Decision Tree, MLP, SVC, GaussianNB
+2. Click **"Train Model"** to start training.
+3. Model performance is displayed in the output box:
+   - **MSE** for Regression
+   - **Accuracy** for Classification
+
+### 3️⃣ Input Bayesian Priors (For GaussianNB)
+
+1. In the **Bayesian Priors input field**, enter comma-separated values (e.g., `0.3, 0.7`).
+2. Click **"Train Model"** to use these priors with `GaussianNB`.
+3. If input is invalid, a warning is displayed.
+
+### 4️⃣ Test SVR on California Housing Dataset
+
+1. Click **"Test SVR on California Housing"**.
+2. The **SVR model** trains and evaluates on the dataset.
+3. **MSE** is displayed in the output box.
+
+---
+
+## 🏁 Running the Application
+
+Run the script using:
+
+```bash
+python ml_gui.py
+```
+
+This will launch the GUI where you can load datasets, train models, and view results.
+
+---
+
+## 🤝 Contributions
+
+Feel free to enhance the GUI by adding:
+
+- More machine learning algorithms
+- Data visualization features
+- Hyperparameter tuning options
+
+Happy coding! 🚀
+
